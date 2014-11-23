@@ -23,3 +23,13 @@
   (display (end-from segment))
   (newline)
 )
+
+(define (midpoint-segment segment)
+  (make-point  (/ (- (x-from (end-from segment)) 
+		     (x-from (start-from segment)) )
+		  2)
+	       (/ (- (y-from (end-from segment)) 
+		     (y-from (start-from segment)) )
+		  2)
+	       )
+)
